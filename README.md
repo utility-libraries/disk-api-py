@@ -1,4 +1,4 @@
-# fs-api
+# disk-api
 An API... but in the filesystem
 
 > [!IMPORTANT]
@@ -6,10 +6,13 @@ An API... but in the filesystem
 
 ## Basic Idea
 
-```python
-from fsapi import FSAPI
+As this is only the basic idea there is nothing you can test yet.
+But basically this library should offer a nice abstraction to [libfuse](https://github.com/libfuse/libfuse?tab=readme-ov-file#libfuse)
 
-api = FSAPI()
+```python
+from diskapi import DiskAPI
+
+api = DiskAPI()
 
 @api.get("/index")
 def index():
@@ -22,4 +25,10 @@ if __name__ == '__main__':
 ```shell
 $ cat ~/api/index
 Hello World
+```
+
+## Installation
+
+```shell
+pip3 install disk-api
 ```
